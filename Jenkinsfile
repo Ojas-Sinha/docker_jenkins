@@ -2,10 +2,14 @@ pipeline{
   agent any
   stages{
     stage('Build Image'){
-      bat 'docker build -t docker_image .'
+      steps{
+        bat 'docker build -t docker_image .'
+      }
     }
     stage('Run conatainer'){
-      bat 'docker run docker_image'
+      steps{
+        bat 'docker run docker_image'
+      }
     }
   }
 }
