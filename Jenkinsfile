@@ -3,12 +3,12 @@ pipeline{
   stages{
     stage('Build Image'){
       steps{
-        bat 'docker build -t docker_image .'
+        bat '"C:\Program Files\Docker\Docker\resources\bin\docker.exe" build -t docker_image .'
       }
     }
     stage('Run conatainer'){
       steps{
-        bat 'docker run docker_image'
+        bat '"C:\Program Files\Docker\Docker\resources\bin\docker.exe" run docker_image'
       }
     }
   }
