@@ -8,7 +8,7 @@ pipeline{
     }
     stage('Run conatainer'){
       steps{
-        bat 'r"C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe" run docker_image'
+        bat '"C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe" run docker_image'
       }
     }
   }
